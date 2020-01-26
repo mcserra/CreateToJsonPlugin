@@ -3,8 +3,12 @@ plugins {
     id 'org.jetbrains.intellij' version '0.4.15'
 }
 
+publishPlugin {
+    token intellijPublishToken
+}
+
 group 'com.miguel.idea'
-version '1.0-SNAPSHOT'
+version '1.0.2'
 
 sourceCompatibility = 1.8
 
@@ -23,6 +27,9 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+        Version 1.0.2 - First upload (Fix "Too short <change-notes> in plugin descriptor plugin.xml").
+        - Generate toJson() method.
+        - Validate if toJson() method already exists.
+        - Adds imports to the class if not already set.
+        """
 }
