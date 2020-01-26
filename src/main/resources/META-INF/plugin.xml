@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>com.miguel.idea.plugin-json</id>
+    <name>JSON-P toJson() method generator</name>
+    <vendor email="serramiguel1@gmail.com" url="https://github.com/mcserra">Miguel Serra</vendor>
+
+    <description><![CDATA[
+    Simple toJson() method generator using <a href="https://javaee.github.io/jsonp/">JSON-P</a>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.miguel.idea.ToJsonAction" class="com.miguel.idea.ToJsonAction" text="_ToJson">
+            <add-to-group group-id="GenerateGroup" anchor="before" relative-to-action="OverrideMethods"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt J"/>
+        </action>
+
+    </actions>
+</idea-plugin>
